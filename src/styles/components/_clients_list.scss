@@ -1,0 +1,92 @@
+.clients {
+  padding-top: 59px;
+
+  &--service {
+    padding-top: 81px;
+  }
+
+  .container {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  &__caption {
+    @include font_sample(700, 14px, calc(17 / 14));
+    letter-spacing: 1px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #323264;
+    margin: 0 0 30px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__element {
+      width: 100%;
+      background: blue;
+      height: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:nth-child(1) {
+        background: #1c4280;
+      }
+      &:nth-child(2) {
+        background: #143646;
+      }
+      &:nth-child(3) {
+        background: linear-gradient(0deg, #f48b30, #f48b30), #f48b30;
+      }
+      &:nth-child(4) {
+        background: #9e4dc3;
+      }
+      &:nth-child(5) {
+        background: #fd9339;
+      }
+      &:nth-child(6) {
+        background: #e2e2e4;
+      }
+      &:nth-child(7) {
+        background: #c71c36;
+      }
+      &:nth-child(8) {
+        background: #eaeaea;
+      }
+      &:nth-child(9) {
+        background: #f5f5fa;
+      }
+      &:nth-child(10) {
+        background: #282240;
+      }
+      &:nth-child(11) {
+        background: #1d4568;
+      }
+      &:nth-child(12) {
+        background: #000000;
+      }
+
+      &:nth-child(n + 7) {
+        @include disappearance;
+
+        @media (min-width: 768px) {
+          @include appearance;
+        }
+      }
+
+      @media (min-width: 768px) {
+        width: calc(100% / 3);
+      }
+
+      @media (min-width: 1024px) {
+        width: calc(100% / 4);
+      }
+
+      img {
+        width: auto;
+      }
+    }
+  }
+}

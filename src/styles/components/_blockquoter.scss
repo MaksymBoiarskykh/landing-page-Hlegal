@@ -1,0 +1,76 @@
+.blockquoter {
+  .container {
+    padding-top: 54px;
+    display: block;
+
+    @media (min-width: 768px) {
+      padding-top: 82px;
+    }
+  }
+
+  &-box {
+    display: flex;
+    background: #f5f5fa;
+    border-radius: 12px;
+    flex-direction: column;
+
+    @media (min-width: 1024px) {
+      flex-direction: row;
+    }
+
+    &__visual {
+      height: 500px;
+      border-radius: 12px 12px 0 0;
+      background: url("../images/image.jpg") center no-repeat;
+      background-size: cover;
+
+      @media (min-width: 1024px) {
+        height: auto;
+        border-radius: 12px 0 0 12px;
+        min-width: 400px;
+      }
+    }
+
+    blockquote {
+      margin: 0;
+    }
+
+    &__text {
+      padding: 30px;
+    }
+
+    &__text__caption {
+      margin: 5px 0 27px 0;
+    }
+
+    span {
+      display: block;
+    }
+
+    &__text__name {
+      @include font_sample(700, 16px, calc(20 / 16));
+      color: #b3b3ba;
+      margin-bottom: 6px;
+    }
+
+    &__text__position {
+      @include font_sample(400, 14px, calc(24 / 14));
+      color: #b3b3ba;
+    }
+  }
+}
+
+/* swiper */
+.swiper-pagination {
+  line-height: 0;
+  position: static;
+  margin: 30px 0 0;
+}
+
+.swiper-pagination-bullet {
+  width: 16px;
+  height: 16px;
+  align-items: start;
+  background: #24a3ff;
+  margin: 0 7.5px !important;
+}

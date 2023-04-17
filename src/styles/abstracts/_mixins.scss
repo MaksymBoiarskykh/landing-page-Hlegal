@@ -1,0 +1,23 @@
+@mixin background_caption() {
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin font_sample($my_weight, $my_size, $my_line-height) {
+  font-weight: $my_weight;
+  font-size: $my_size;
+  line-height: $my_line-height;
+}
+
+@mixin disappearance() {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin appearance() {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+}
